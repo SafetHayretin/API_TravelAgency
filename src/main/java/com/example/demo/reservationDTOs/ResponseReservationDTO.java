@@ -16,11 +16,11 @@ public class ResponseReservationDTO extends ReservationDTO {
         this.id = id;
     }
 
-    public ResponseHolidayDTO getResponseHolidayDTO() {
+    public ResponseHolidayDTO getHoliday() {
         return holiday;
     }
 
-    public void setResponseHolidayDTO(ResponseHolidayDTO responseHolidayDTO) {
+    public void setHoliday(ResponseHolidayDTO responseHolidayDTO) {
         this.holiday = responseHolidayDTO;
     }
 }

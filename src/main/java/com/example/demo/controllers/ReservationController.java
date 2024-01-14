@@ -54,7 +54,7 @@ public class ReservationController {
         Long id = reservation.getHolidayId();
         Holiday holiday = holidayRepository.getReferenceById(id);
         ResponseHolidayDTO holidayDto = holidayController.convertToDTO(holiday);
-        responseReservationDTO.setResponseHolidayDTO(holidayDto);
+        responseReservationDTO.setHoliday(holidayDto);
         responseReservationDTO.setContactName(reservation.getContactName());
         responseReservationDTO.setPhoneNumber(reservation.getPhoneNumber());
 
