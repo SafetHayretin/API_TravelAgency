@@ -1,7 +1,6 @@
 package com.example.demo.controllers;
 
 import com.example.demo.holidayDTOs.CreateHolidayDTO;
-import com.example.demo.abstractDTO.HolidayDTO;
 import com.example.demo.holidayDTOs.ResponseHolidayDTO;
 import com.example.demo.holidayDTOs.UpdateHolidayDTO;
 import com.example.demo.locationDTOs.ResponseLocationDTO;
@@ -16,7 +15,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;

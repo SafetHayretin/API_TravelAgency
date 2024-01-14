@@ -25,6 +25,6 @@ public interface HolidayRepository extends JpaRepository<Holiday, Long> {
             "AND (:locations is null or e.locationId IN :locations) " +
             "AND (:startDate is null or e.startDate = :startDate)")
     List<Holiday> findByDurationAndCountryAndStartDate(@Param("duration") String duration,
-                                                          @Param("locations") List<Long> locations,
-                                                          @Param("startDate") String startDate);
+                                                       @Param("locations") List<Long> locations,
+                                                       @Param("startDate") String startDate);
 }

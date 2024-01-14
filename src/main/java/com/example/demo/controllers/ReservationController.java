@@ -1,19 +1,13 @@
 package com.example.demo.controllers;
 
-import com.example.demo.abstractDTO.ReservationDTO;
-import com.example.demo.holidayDTOs.CreateHolidayDTO;
 import com.example.demo.holidayDTOs.ResponseHolidayDTO;
-import com.example.demo.locationDTOs.ResponseLocationDTO;
 import com.example.demo.models.Holiday;
-import com.example.demo.models.Location;
 import com.example.demo.models.Reservation;
 import com.example.demo.repositories.HolidayRepository;
-import com.example.demo.repositories.LocationRepository;
 import com.example.demo.repositories.ReservationRepository;
 import com.example.demo.reservationDTOs.CreateReservationDTO;
 import com.example.demo.reservationDTOs.ResponseReservationDTO;
 import com.example.demo.reservationDTOs.UpdateReservationDTO;
-import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

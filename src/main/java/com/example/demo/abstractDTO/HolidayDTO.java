@@ -1,7 +1,5 @@
 package com.example.demo.abstractDTO;
 
-import com.example.demo.models.Location;
-
 public abstract class HolidayDTO {
     private int duration;
     private int freeSlots;

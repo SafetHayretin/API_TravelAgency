@@ -1,7 +1,5 @@
 package com.example.demo.abstractDTO;
 
-import com.example.demo.models.Holiday;
-
 public abstract class ReservationDTO {
     private String phoneNumber;
     private String contactName;

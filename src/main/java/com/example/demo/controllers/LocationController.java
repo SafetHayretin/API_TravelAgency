@@ -1,7 +1,9 @@
 package com.example.demo.controllers;
 
 import com.example.demo.abstractDTO.LocationDTO;
-import com.example.demo.locationDTOs.*;
+import com.example.demo.locationDTOs.CreateLocationDTO;
+import com.example.demo.locationDTOs.ResponseLocationDTO;
+import com.example.demo.locationDTOs.UpdateLocationDTO;
 import com.example.demo.models.Location;
 import com.example.demo.repositories.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;

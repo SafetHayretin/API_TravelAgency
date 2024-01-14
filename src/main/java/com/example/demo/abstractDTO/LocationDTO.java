@@ -3,7 +3,7 @@ package com.example.demo.abstractDTO;
 public abstract class LocationDTO {
     private String street;
 
-    private String  number;
+    private String number;
 
     private String city;
 

@@ -2,7 +2,7 @@ package com.example.demo.reservationDTOs;
 
 import com.example.demo.abstractDTO.ReservationDTO;
 
-public class UpdateReservationDTO  extends ReservationDTO {
+public class UpdateReservationDTO extends ReservationDTO {
     private Long id;
 
     private Long holiday;

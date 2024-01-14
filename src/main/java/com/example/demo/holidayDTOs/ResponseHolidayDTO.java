@@ -13,7 +13,7 @@ public class ResponseHolidayDTO extends HolidayDTO {
 
     public void setId(Long id) {
         this.id = id;
-   }
+    }
 
     public ResponseLocationDTO getLocation() {
         return this.location;
