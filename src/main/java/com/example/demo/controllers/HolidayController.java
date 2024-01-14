@@ -16,6 +16,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,19 +101,22 @@ public class HolidayController {
         }
     }
 
-
     @GetMapping
-    public ResponseEntity<List<ResponseHolidayDTO>> getAllHolidays() {
+    public ResponseEntity<List<ResponseHolidayDTO>> getHolidayByLocation(@RequestParam(required = false) String location,
+                                                                         @RequestParam(required = false) String duration,
+                                                                         @RequestParam(required = false) String startDate) {
+        String decodedLocation = (location != null) ? URLDecoder.decode(location, StandardCharsets.UTF_8) : null;
         try {
-            List<Holiday> holidays = holidayRepository.findAll();
+            List<Long> locationIds = (decodedLocation != null) ? locationRepository.findByLocation(decodedLocation) : null;
+            List<Holiday> holiday = holidayRepository.findByDurationAndCountryAndStartDate(duration, locationIds, startDate);
 
-            return ResponseEntity.ok(convertAllToDTO(holidays));
+            return ResponseEntity.ok(convertAllToDTO(holiday));
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
     }
 
-    private List<ResponseHolidayDTO> convertAllToDTO(List<Holiday> holidays) {
+    List<ResponseHolidayDTO> convertAllToDTO(List<Holiday> holidays) {
         List<ResponseHolidayDTO> holidayDTOS = new ArrayList<>();
 
         for (Holiday holiday : holidays) {

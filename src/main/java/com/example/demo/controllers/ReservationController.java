@@ -25,7 +25,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/reservations")
 public class ReservationController {
-
     @Autowired
     private ReservationRepository reservationRepository;
 
